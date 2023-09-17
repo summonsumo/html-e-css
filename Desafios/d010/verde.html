@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Background with Slider</title>
+    <style>
+        h1
+        {
+            color : white
+        }
+        body {
+            text-align: center;
+            background: linear-gradient(to right, red, green, blue);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            color: white;
+        }
+
+        .colorPicker {
+            width: 100px;
+            height: 100px;
+            margin: 20px;
+            border: none;
+        }
+
+        #slider {
+            width: 100%;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Fundo de Gradientes Verdes</h1>
+
+    <!-- Color pickers -->
+    <input type="color" class="colorPicker" id="colorPickerStart" value="#003300">
+    <input type="color" class="colorPicker" id="colorPickerMiddle" value="#00AA00">
+    <input type="color" class="colorPicker" id="colorPickerEnd" value="#00ff00">
+
+    <!-- Slider to control gradient position -->
+    <input type="range" min="0" max="100" value="50" id="slider">
+
+    <script>
+        // JavaScript to update the gradient background
+        const colorPickerStart = document.getElementById("colorPickerStart");
+        const colorPickerMiddle = document.getElementById("colorPickerMiddle");
+        const colorPickerEnd = document.getElementById("colorPickerEnd");
+        const slider = document.getElementById("slider");
+
+        function updateGradient() {
+            const startColor = colorPickerStart.value;
+            const middleColor = colorPickerMiddle.value;
+            const endColor = colorPickerEnd.value;
+            const sliderValue = slider.value;
+
+            const gradient = `linear-gradient(to right, ${startColor}, ${middleColor} ${sliderValue}%, ${endColor})`;
+
+            document.body.style.backgroundImage = gradient;
+
+            document.h1.style.Image = `linear-gradient(to top, ${endColor}, ${middleColor} ${sliderValue}%, ${startColor})`;
+        }
+
+        colorPickerStart.addEventListener("input", updateGradient);
+        colorPickerMiddle.addEventListener("input", updateGradient);
+        colorPickerEnd.addEventListener("input", updateGradient);
+        slider.addEventListener("input", updateGradient);
+
+        // Initialize the gradient
+        updateGradient();
+    </script>
+    <a href="index.html">Retornar ao início</a>
+</body>
+</html>
