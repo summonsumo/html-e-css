@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+body{
+    background-color: rgb(73, 164, 134);
+}
+pre
+{
+    background-color: rgba(129, 104, 153, 0.4);
+    font-size: 1.5em;
+    font-weight: 800;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    
+}
+
+h2
+{
+    color: blue;
+    font-weight: 800;
+}
+
+h3 
+{
+    font-size: 2em;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+    font-style: oblique;
+    color: green;
+}
+

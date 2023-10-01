@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        a {
+            color: red;
+            text-decoration: none; /* Remove o Sublinhado do link */
+            font-weight: bold; /*Negrito */
+        }
+
+        a:visited {
+            color: darkmagenta;
+        }
+
+
+        #aula:visited{ /*endereço já visitado*/
+            color: greenyellow;
+        }
+
+        a:hover{ /* ao passar o mouse*/
+            color: black;
+            text-decoration: underline;
+        }
+
+        a:active{ /* ao clicar */
+            color: yellow;
+        }
+
+        a::after {
+            content: ' [link]';
+            text-decoration: none;
+            font-weight: normal;
+            color: darkgray;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Seletores Personalizados</h1>
+    <p> # ID <br>
+        . Class <br>
+        : Pseudo-Class <br>
+        :: Pseudo-Element <br>
+        > Children </p> 
+
+    <h1>Personalizando links</h1>
+    <ul>
+        <li> <a href="https://www.linkedin.com/in/daniel-mattos-dev">LinkedIn</a></li>
+        <li> <a href="https://drive.google.com/drive/folders/1rk8Pxdo-z5LKk0Ny3mgkq6LiGWRvN38Z">google drive</a></li>
+        <li> <a id="aula" href="https://youtu.be/3nQWTZhmPgM">Aula CPDI</a></li>
+    </ul>
+</body>
+</html>
