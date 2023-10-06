@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desafio de Box</title>
+    <style>
+        body{
+            background-image: url(casas.jpeg);
+            background-size:cover;
+        }
+        div.container{
+            display:inline-block;
+            position:relative;
+        }
+        #esponja{
+            width: 30vh;
+            height: 25vh;
+            background-image: url('bobesponja.png');
+            background-size: 100% 100%;
+            background-position: left bottom;
+            transform:translate(550%,200%);
+            resize: both;
+        }
+        #lula{
+            width : 30vh;
+            height : 40vh;
+            background-image: url('lulamolusco.png');
+            background-size: 100% 100%;
+            background-position: bottom center;
+            transform:translate(200%,120%);
+        }
+        #patrick{
+            width: 25vh;
+            height : 25vh;
+            background-image: url('patrick.png');
+            background-size: 100% 100%;
+            background-position: right bottom;
+            transform:translate(-180%,200%);
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="esponja"></div>
+    <div class="container" id="lula"></div>
+    <div class="container" id="patrick"></div>
+    
+</body>
+</html>
