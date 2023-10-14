@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Formulário HTML5 e CSS3</title>
+
+    <style>
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1{
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        form{
+            max-width: 600px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.315);
+
+        }
+
+        label{
+            font-weight: bold;
+            display: block;
+            margin-bottom: 6px;
+        }
+
+        label.interesses, label.referencia{
+            font-weight: bold;
+            display:inline-block;
+            margin: 5px;
+            padding: 0px;
+            font-size: 12px; 
+        }
+
+        input[type="email"], input[type="name"],input[type="date"],input[type="textarea"],input[type="file"],input[type="text"],select, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 3px;
+            background-color: #f9f9f9;
+            box-sizing: border-box;
+        }
+
+        textarea{
+            resize: vertical;
+        }
+
+        button[type="submit"] {
+            background-color: #007bff;
+            color:white;
+            border: none;
+            border-radius: 3px;
+            padding: 12px 24px;
+            cursor: pointer;
+        }
+
+
+        button[type="submit"]:hover{
+            background-color: #0056b3;
+            
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Formulário HTML5 e CSS3</h1>
+    <form action="processar.php" method="post">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" placeholder="Seu nome completo" required>
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" placeholder="Seu E-mail" required>
+
+        <label for="sexo">Sexo:</label>
+        <select name="sexo" id="sexo">
+            <option value="masculino">Masculino</option>
+            <option value="feminino">Feminino</option>
+            <option value="outros">Outros</option>
+        </select>
+
+        <label for="interesses">Interesses</label>
+        <input type="checkbox"  class = "interesses" id="esportes" name="interesses" value="esportes">
+        <label for="tecnologia" class="interesses">Esportes</label>
+        <input type="checkbox"  class = "interesses" id="tecnologia" name="interesses" value="tecnologia">
+        <label for="tecnologia" class="interesses">Tecnologia</label>
+        <input type="checkbox"  class = "interesses" id="viagens" name="interesses" value="viagens">
+        <label for="viagens" class="interesses">Viagens</label>
+
+        <label>Como você ficou sabendo deste site?</label>
+        <input type="radio" class="referencia" name="referencia" id="amigos" value="amigos">
+        <label for="amigos" class="referencia">Amigos</label>
+        <input type="radio" class="referencia" name="referencia" id="pesquisa" value="pesquisa">
+        <label for="pesquisa" class="referencia">Pesquisa na Internet</label>   
+        <input type="radio" class="referencia" name="referencia" id="outro" value="outro">
+        <label for="outro" class="referencia">Outro</label>
+
+        <label for="data_nascimento">Data de nascimento</label>
+        <input type="date" id="data_nascimento" name="data_nascimento" placeholder="Sua data de nascimento" required>
+
+        <label for="mensagem">Mensagem:</label>
+        <textarea id="mensagem" name="mensagem" placeholder="Sua mensagem" rows="6"></textarea>
+
+        <label for="curriculo">Carregar currículo (PDF ou Word)</label>
+        <input type="file" id="curriculo" name="curriculo" accept=".pdf,.doc,.docx" required>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>
